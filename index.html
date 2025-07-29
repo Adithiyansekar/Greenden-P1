@@ -14,10 +14,10 @@
 
   <body>
     <!--responsive Navbar-->
-    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0">
+    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
       <h1 class="text-2xl">Greenden</h1>
 
-      <svg
+      <svg id="menuicon"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -34,23 +34,50 @@
 
       <ul class="flex gap-5 text-gray-600 hidden md:flex">
         <li>
-          <a class="hover:underline hover:text-black" href="#">Home</a>
+          <a class="hover:underline hover:text-black" href="product.html">Products</a>
         </li>
         <li>
-          <a class="hover:underline hover:text-black" href="#">Products</a>
+          <a class="hover:underline hover:text-black" href="contact.html">Contacts</a>
         </li>
         <li>
-          <a class="hover:underline hover:text-black" href="#">Contacts</a>
+            <div class="hover:shadow-xl transform hover:-translate-y-2">
+            <a href="cart.html" class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" >
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+</svg>
+            </a>
+            </div>
         </li>
       </ul>
     </nav>
+  <!--Side navbar-->
+  <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+    <div class="text-right p-5">
+      <p id="closenav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col gap-10 items-center text-gray-600">
+        <!-- <li>
+          <a class="hover:underline hover:text-black" href="index.html">Home</a>
+        </li> -->
+        <li>
+          <a class="hover:underline hover:text-black" href="product.html">Products</a>
+        </li>
+        <li>
+          <a class="hover:underline hover:text-black" href="contact.html">Contacts</a>
+        </li>
+        <li>
+            <a class="hover:underline hover:text-black" href="cart.html">Cart</a>
+        </li>
+      </ul>
+
+  </section>
     <!--Header section-->
-    <section class="bg-green-100 p-4 flex justify-center">
+    <section class="bg-green-100 p-4 md:p-10 flex justify-center">
       <div>
         <p class="mb-4">
           We offer you a wide range of Artificail and Natural Flowers
         </p>
-        <h2 class="font-bold text-3xl mb-5">Plants for your Interior</h2>
+        <h2 class="font-bold text-3xl md:text-5xl mb-5">Plants for your Interior</h2>
         <div>
           <button class="bg-black rounded p-2 text-white">Shop Now</button>
           <button class="border border-black rounded p-2">Watch Video</button>
@@ -58,10 +85,10 @@
         <p class="mt-5">160+ Plants Species | 100+ CLients</p>
       </div>
       <div class="hidden md:block p-5">
-        <img src="./images.jpeg" alt="Header Image" class="w-80 h-80" />
+        <img src="./images/images.jpeg" alt="Header Image" class="w-80 h-80" />
       </div>
     </section>
-    <!--About-->
+    <!--About Sectopm-->
 
     <section class="text-center">
       <h1 class="text-3xl font-bold mt-5">About Us</h1>
@@ -97,5 +124,76 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dolor corporis distinctio modi quisquam similique cum officia impedit eaque voluptatibus, quo dolorum facere atque dolore molestias voluptatum veniam labore est.
       </div>
     </div>
+    <!--Best Seller-->
+    <section class="p-4">
+        <h1 class="font-bold mt-5 text-3xl text-center">Best seller</h1>
+        <div class="grid grid-cols-2 text-center mt-5 gap-5 md:grid-cols-4 ">
+           <div>
+                <img src="./images/Best seller 1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" style="border: black solid 1px;" alt="">
+                <h1>Home Plant</h1>
+                <p>$20</p>
+                <button class="text-2xl md:text-4xl hover:shadow-xl transform hover:-translate-x-2 ">-</button> <button class=" text-2xl md:text-3xl hover:shadow-xl transform hover:translate-x-2">+</button>
+            </div>
+            <div>
+                <img src="./images/Best seller 2.jpg"  class="inline hover:shadow-xl transform hover:-translate-y-2" style="border: black solid 1px;" alt="">
+                <h1>Snake Plant</h1>
+                <p>$20</p>
+                <button class="text-2xl md:text-4xl hover:shadow-xl transform hover:-translate-x-2 ">-</button> <button class=" text-2xl md:text-3xl hover:shadow-xl transform hover:translate-x-2">+</button>
+            </div>
+            <div>
+                <img src="./images/Best seller 3.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" style="border: black solid 1px;" alt="">
+                <h1>Decorative Plant</h1>
+                <p>$25</p>
+                <button class="text-2xl md:text-4xl hover:shadow-xl transform hover:-translate-x-2 ">-</button> <button class=" text-2xl md:text-3xl hover:shadow-xl transform hover:translate-x-2">+</button>
+            </div>
+            <div>
+                <img src="./images/Best seller 4.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" style="border: black solid 1px;" alt="">
+                <h1>No Water Plant</h1>
+                <p>$25</p>
+                <button class="text-2xl md:text-4xl hover:shadow-xl transform hover:-translate-x-2 ">-</button> <button class=" text-2xl md:text-3xl hover:shadow-xl transform hover:translate-x-2">+</button>
+            </div>
+        </div>
+    </section>
+    <!--Customer Reviews-->
+    <section>
+        <!-- <div class="mt-5 p-5"> -->
+            <h1 class="font-bold mt-5 text-3xl text-center mb-5">Customer Reviews</h1>
+            <div class="flex flex-col gap-5 text-white m-5">
+                <div class="bg-green-900 container p-5"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt fugiat cumque nesciunt unde omnis. Dicta, facilis corporis. Sed, molestias reiciendis consectetur illo enim officia itaque voluptates eum deleniti, optio similique!</p>
+                    <p class="font-bold text-yellow-300">Genny Mathew</p>
+                </div>
+                <div class="bg-green-900 container p-5"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt fugiat cumque nesciunt unde omnis. Dicta, facilis corporis. Sed, molestias reiciendis consectetur illo enim officia itaque voluptates eum deleniti, optio similique!</p>
+                    <p class="font-bold text-yellow-300">Jim</p>
+                </div>
+                <div class="bg-green-900 container p-5"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt fugiat cumque nesciunt unde omnis. Dicta, facilis corporis. Sed, molestias reiciendis consectetur illo enim officia itaque voluptates eum deleniti, optio similique!</p>
+                    <p class="font-bold text-yellow-300">parker</p>
+                </div>
+            </div>
+    </section>
+    
+        <!--Join our news letter-->
+        <section class="text-center">
+            <div>
+                <h1 class="font-bold mt-5 text-3xl">Join our News Letter</h1>
+                <p class="text-center">Signup for our newspaper to get exclusive discounts, updates, and more</p>
+                <input type="text" class=" border border-black p-2 m-3" style="width: 80%;">
+                <br>
+                <button class="bg-black text-white p-3 m-1 underline">Subscribe</button>
+            </div>
+            <!-- <div class=" bg-black p-3 text-center ">
+                <h2 class="font-bold  text-white">Subscribe</h2>
+            </div> -->
+        </section> 
+        <!--Footer-->
+        <section class="bg-green-100 p-10 flex flex-col gap-5 mt-3">
+            <h1 class="text-4xl font-bold">Greenden</h1>
+            <p>The standard chunk of loremipsum used since the 1500s is reprodused below for htose interest</p>
+            <p>@2025 Greenday.com</p>
+        </section>        
+
+    <!-- </div> -->
+        <script src="index.js">
+
+        </script>
       </body>
 </html>
